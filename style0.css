@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+}
+.title{
+    display:flex;
+    justify-content: center;
+    padding: 5vh;
+    background-color: aqua;
+}
+.space{
+    display: flex;
+    padding: 35vh;
+    background-color: red;
+}
+.option{
+    display: flex;
+    justify-content: center;
+    padding: 5vh;
+    background-color: blue;
+    gap: 20px;
+}
+button{
+    background-color: blueviolet;
+    
+}
