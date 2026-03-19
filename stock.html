@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Managenmet</title>
+    <link rel="stylesheet" href="style.css"></link>
+</head>
+<body>
+    <div class="headerStock">
+        <h1>Management Stock</h1>
+    </div>
+    <div class="stockContainer">
+            <h2>List Barang</h2>
+            <div class="searchBox">
+                <input type="text" id="cariInput" placeholder="Cari barang ...">
+            </div>
+            <button class="addButton" id="addButton">Tambah Barang</button>
+    </div>
+    </div>
+
+    <table class="stockTable">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Jumlah Barang</th>
+                <th>jenis barang</th>
+                <th>Harga Beli</th>
+                <th>Harga Jual</th>
+                <th>Kadaluarsa</th>
+                <th>Tanggal Masuk Terahir</th>
+            </tr>
+        </thead>
+        <tbody class="stockTable" id="tableBody"></tbody>
+    </table>
+</body>
+<script src="script.js"></script>
+</html>
