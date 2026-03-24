@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasir Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div id="receiptArea" style="display: none;">
+    <div style="text-align: center;">
+        <h2>TOKO BERJALAN BAIK</h2>
+        <p>Jl. Contoh No. 123, Jakarta</p>
+        <hr>
+    </div>
+    <table id="receiptTable" style="width: 100%; border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th style="text-align: left;">Item</th>
+                <th>Qty</th>
+                <th style="text-align: right;">Total</th>
+            </tr>
+        </thead>
+        <tbody id="receiptContent"></tbody>
+    </table>
+    <hr>
+    <div style="text-align: right;">
+        <h3 id="receiptTotal">Total: Rp 0</h3>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+        <p>Terima Kasih Telah Berbelanja!</p>
+    </div>
+</div>
+<body>
+    <div class="top">
+        <h1>Kasir Digital</h1>
+    </div>
+
+    <br>
+    
+    <nav class="option">
+        <a href="index.html">kasir</a>
+        <a href="stock.html">stock</a>
+    </nav>
+
+    <div class="mainbox">
+        <div class="cashier-container">
+            <div class="input-section">
+                <h3>Pilih Produk</h3>
+                <div class="form-group">
+                    <input type="text" id="productInput" placeholder="Cari Nama Produk..." list="productSuggestions">
+                    <datalist id="productSuggestions">
+                        </datalist>
+                    <input type="number" id="qtyInput" placeholder="Qty" min="1" value="1">
+                    <button id="addBtn">Tambah</button>
+                </div>
+            </div>
+
+            <div class="cart-section">
+                <table id="cartTable">
+                    <thead>
+                        <tr>
+                            <th>Produk</th>
+                            <th>Harga</th>
+                            <th>Qty</th>
+                            <th>Subtotal</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cartBody">
+                        </tbody>
+                </table>
+            </div>
+
+            <div class="checkout-section">
+                <div class="total-display">
+                    <span>Total Keseluruhan:</span>
+                    <h2 id="grandTotal">Rp 0</h2>
+                </div>
+                <button id="printBtn">print struk</button>
+                <button id="downloadCsvBtn" style="background-color: #27ae60; color: white;">Download CSV</button>
+                <button id="checkoutBtn">Bayar Sekarang</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

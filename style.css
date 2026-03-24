@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: bisque;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ini kuncinya agar semua isi .top rata kiri */
+    padding-left: 0; /* Pastikan tidak ada padding kiri yang mendorong menu */
+    padding-top: 10px;
+
+}
+.mainbox{
+    padding: 1%;
+    background-color: rgb(218, 255, 179);
+}
+.bottom{
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.headerStock{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1vh;
+}
+.addButton{
+    height: 50px;
+    width: 150px;
+    background-color: rgb(81, 238, 186);
+    border:none;
+    font-size: 20px;
+    box-shadow: 0px 0px 10px green;
+    border-radius: 20px;
+}
+
+.addButton:hover{
+    height: 50px;
+    width: 150px;
+    background-color: rgb(185, 236, 219);
+    border:none;
+    font-size: 20px;
+    box-shadow: 0px 0px 10px rgb(184, 238, 184);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.addButton:active{
+    height: 50px;
+    width: 150px;
+    background-color: rgb(9, 245, 166);
+    border:none;
+    font-size: 20px;
+    box-shadow: 0px 0px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.stockContainer{
+
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+.stockTable th, .stockTable td {
+    padding: 12px 15px; /* Memberi ruang agar tidak sesak */
+    text-align: center; /* MEMBUAT TEKS KE TENGAH */
+    border-bottom: 1px solid rgba(0,0,0,0.1); /* Garis halus antar baris */
+    text-align: right;
+    padding-right: 20px;
+    font-family: 'Courier New', Courier, monospace; 
+}
+#cariInput{
+    padding: 10px 100px ;
+    border-radius: 50px;
+    border: none;
+}
+.editBtn {
+    background-color: #4facfe;
+    color: white;
+    border: none;
+    /* Gunakan padding yang seimbang */
+    padding: 8px 16px; 
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    /* Tambahkan font-size agar teks tidak terlalu besar/kecil */
+    font-size: 14px; 
+}
+.dltBtn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.stockTable td:nth-child(5), 
+.stockTable td:nth-child(6) {
+    text-align: right;
+    padding-right: 20px;
+    font-family: 'Courier New', Courier, monospace; /* Opsional: gaya kasir */
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; /* Ini yang akan menggeser link ke kanan */
+    gap: 20px;
+    font-size: 25px;
+    width: 100%; /* Pastikan nav mengambil lebar penuh layar */
+}
+
+.mainbox {
+    padding: 20px;
+    background-color: #fdf5e6; /* Menyesuaikan warna bisque lembut */
+    min-height: 400px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.cashier-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    gap: 10px;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#productInput { flex: 3; }
+#qtyInput { flex: 1; }
+
+#addBtn {
+    padding: 10px 20px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Tabel Belanja */
+#cartTable {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+#cartTable th, #cartTable td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+#cartTable th {
+    background-color: #34495e;
+    color: white;
+}
+
+.checkout-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#checkoutBtn {
+    padding: 15px 30px;
+    background-color: #e67e22;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#printBtn {
+    padding: 15px 30px;
+    background-color: #e67e22;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* CSS KHUSUS UNTUK PRINT */
+@media print {
+    /* 1. Atur Ukuran Kertas */
+    @page {
+        size: 80mm auto; /* Lebar 80mm, tinggi otomatis mengikuti isi */
+        margin: 0;       /* Menghilangkan margin default browser (header/footer) */
+    }
+
+    body {
+        background-color: white !important;
+        margin: 0;
+        padding: 0;
+        width: 80mm; /* Pastikan body mengikuti lebar kertas */
+    }
+
+    /* 2. Sembunyikan elemen yang tidak perlu dicetak */
+    .top, .option, .mainbox, .bottom, button, h1 {
+        display: none !important;
+    }
+
+    /* 3. Tampilkan dan atur layout struk */
+    #receiptArea {
+        display: block !important;
+        width: 100%;
+        padding: 5mm;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 12px;
+        line-height: 1.2;
+    }
+
+    #receiptTable {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+
+    #receiptTable th, #receiptTable td {
+        border: none !important; /* Struk biasanya tidak pakai garis kotak-kotak */
+        padding: 2px 0;
+    }
+
+    /* Garis putus-putus khas struk */
+    hr {
+        border: none;
+        border-top: 1px dashed #000;
+        margin: 10px 0;
+    }
+}
