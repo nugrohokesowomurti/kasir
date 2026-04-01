@@ -44,7 +44,7 @@ h1 {
     height: 3rem;
     background-color: rgb(81, 238, 186);
     border:none;
-    font-size: 0.5rem;
+    font-size: 1rem;
     box-shadow: 0px 0px 10px green;
     border-radius: 20px;
 }
@@ -100,6 +100,17 @@ h1 {
     cursor: pointer;
     font-size: 14px;
 }
+
+.tmbhBarang {
+    background-color: #067111;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
 .stockTable td:nth-child(5), 
 .stockTable td:nth-child(6) {
     text-align: right;    min-width: 0.25rem;
@@ -293,4 +304,21 @@ nav {
     padding: 10px;
     white-space: nowrap; /* Mencegah teks terlipat ke bawah, jadi tetap satu baris */
     text-align: left;
+}
+
+/* Untuk tombol di tabel laporan */
+#tableBodyPenjualan .editBtn {
+    background-color: #f39c12; /* Warna Oranye untuk bedakan dengan stok */
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+#tableBodyPenjualan .dltBtn {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+small {
+    color: #666;
+    font-style: italic;
 }
